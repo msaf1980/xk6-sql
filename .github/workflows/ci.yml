@@ -40,4 +40,6 @@ jobs:
         with:
           go-version: 1.17.x
       - name: Run unit tests
-        run: go test -v -cover -race ./...
+        run: make test
+      - name: Run sqlite intergration tests
+        run: make integration_sqlite3
